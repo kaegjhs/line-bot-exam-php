@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
-
+                        $messages = 'สวัสดีจ้า';
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -46,12 +46,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 		}
-		if($message == "สวัสดี"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+		
 	}
 }
 echo "OK";

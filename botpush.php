@@ -19,7 +19,7 @@ $response = $bot->pushMessage($pushID, $textMessageBuilder);
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 */
-<?php
+
    $accessToken = "c7FPNNIpO7lYkSVeqjRvQDAsvczv5G70+BDFDCXXVLTazFLNIcD0WwCzoOgW5yJ63MLueTPcfSt9JpgZtekQP87g/zaKxic9TaNp9yK3ab1kPPuQP9ZWI9NlsX9YkXZWn/yfda5jAUDiAr+1Qu6m9gdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);

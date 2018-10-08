@@ -48,7 +48,35 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
+		}else if ($event['message']['text'] == 'กินข้าวรึยังจ้ะ'){
+                
+                // Constants firebase
+                 $length = 15;
+                $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+                // Constants
+                   $FIREBASE = "https://test-line-api-e73a3.firebaseio.com/";
+                $NODE_PUT = $randomString.".json";
+                $randomString2 = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 11);
+                // Matching nodes updated
+                $data = array(
+                    "url" => $randomString2
+                );
+                    // JSON encoded
+                $json = json_encode($data);
+                // Initialize cURL
+                $curl = curl_init();
+            //Create
+                 curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PUT );
+                 curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PUT" );
+                curl_setopt( $curl, CURLOPT_POSTFIELDS, $json);
+               // Get return value
+                curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
+                // Make request
+                // Close connection
+                $response = curl_exec( $curl );
+                curl_close( $curl );
+                // Show result
+                echo $response . "\n";
 		
 	}
 }

@@ -2,6 +2,7 @@
 
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+require "test-line-api-e73a3-firebase-adminsdk-6d0vd-e17ebc9e84.json";
 
 $access_token = '+sDtl9F1rGQZKiRMomzyXbJHY9ktfzCC5OOvs4RMNqswHTjJd4RdABYr3yoQ21f53MLueTPcfSt9JpgZtekQP87g/zaKxic9TaNp9yK3ab0TdoCoI+fJIvCJnM7xBwnsHswCt0jGQSkjeo1QJbZ5wAdB04t89/1O/w1cDnyilFU=';
 

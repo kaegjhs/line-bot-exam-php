@@ -51,8 +51,8 @@ if (!is_null($events['events'])) {
 		}else if ($event['message']['text'] == 'กินข้าวรึยังจ้ะ'){
                 
                 // Constants firebase
-                 $length = 15;
-                $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+                 //$length = 15;
+              //  $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
                 // Constants
                    $FIREBASE = "https://test-line-api-e73a3.firebaseio.com/";
                 $NODE_PUT = $randomString.".json";
